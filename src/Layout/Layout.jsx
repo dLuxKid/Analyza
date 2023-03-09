@@ -7,7 +7,7 @@ const Layout = () => {
   return (
     <div className="w-screen h-screen flex relative bg-fill">
       <Sidebar />
-      <div className="flex flex-col w-full">
+      <div className="section flex flex-col w-full">
         <Header />
         <Routers />
       </div>

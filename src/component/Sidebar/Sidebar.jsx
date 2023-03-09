@@ -8,7 +8,6 @@ import { BsChevronDoubleLeft } from "react-icons/bs";
 
 const Sidebar = () => {
   const screensize = useSelector((state) => state.user.screensize);
-  console.log(screensize);
   const openSidebar = useSelector((state) => state.user.openSidebar);
   const dispatch = useDispatch();
 
@@ -31,15 +30,15 @@ const Sidebar = () => {
 
   return (
     <div
-      className={`w-60 overflow-auto h-screen duration-300 ease-in-out bg-black1 ${
-        openSidebar ? "fixed" : null
+      className={`w-60 overflow-auto h-screen duration-300 bg-black1 ${
+        openSidebar && screensize <= 768 ? "fixed" : null
       }`}
     >
       <div className="flex justify-between flex-col h-screen">
         <div className="flex flex-col items-center justify-center gap-10 mt-6 p-5">
           <div
             className={`flex justify-${
-              !openSidebar ? "center" : "between"
+              screensize > 768 ? "center" : "between"
             } w-full`}
           >
             <h1 className="text-white text-center origin-left font-bold items-center md:text-2xl sm:text-xl">

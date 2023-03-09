@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { setOpenSidebar, setScreenSize } from "../../store/Reducers/userSlice";
 import { BsChevronDoubleRight, BsBell } from "react-icons/bs";
 import { CiSearch } from "react-icons/ci";
+import logo from "../../assets/images/thomas.jpg";
 
 const Header = () => {
   const dispatch = useDispatch();
@@ -21,7 +22,7 @@ const Header = () => {
   }, [screenSize]);
 
   return (
-    <div className="container">
+    <div className="">
       {!side && screenSize <= 768 ? (
         <div className="icon absolute left-0 top-9 ml-3 justify-center">
           <span onClick={() => dispatch(setOpenSidebar())}>
@@ -29,9 +30,12 @@ const Header = () => {
           </span>
         </div>
       ) : null}
-      <div className="flex flex-col gap-y-5 justify-between md:flex-row md:flex-grow ml-8">
-        <div className="flex flex-col sm:gap-y-1 gap-y-0.5">
-          <h1 className="text-black1 text-4xl font-bold md:text-2xl sm:text-xl">
+      <div
+        className="flex flex-col gap-y-5 justify-between lg:flex-row md:flex-grow"
+        style={{ marginLeft: screenSize <= 768 ? "2rem" : "" }}
+      >
+        <div className="flex flex-col gap-y-0.5">
+          <h1 className="text-black1  font-bold md:text-3xl sm:text-2xl text-xl">
             Welcome, Thomas
           </h1>
           <p className="text-natural3 text-xs sm:text-sm md:text-base font-medium capitalize">
@@ -46,10 +50,18 @@ const Header = () => {
             <BsBell />
           </div>
           <div className="flex gap-2">
-            <div></div>
-            <div>
-              <p></p>
-              <p></p>
+            <div className="h-8 w-8 rounded-full overflow-hidden">
+              <img
+                src={logo}
+                alt="logo"
+                className="h-full w-full object-cover"
+              />
+            </div>
+            <div className="flex flex-col h-8">
+              <p className="font-bold text-black2 text-sm leading-4">
+                Thomas F.
+              </p>
+              <p className="text-xs text-natural3">UI Designer</p>
             </div>
           </div>
         </div>
