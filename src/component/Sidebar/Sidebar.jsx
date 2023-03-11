@@ -30,7 +30,7 @@ const Sidebar = () => {
 
   return (
     <div
-      className={`w-60 overflow-auto h-screen duration-300 bg-black1 ${
+      className={`w-60 overflow-auto duration-300 bg-black1 ${
         openSidebar && screensize <= 768 ? "fixed" : null
       }`}
     >

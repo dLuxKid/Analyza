@@ -4,8 +4,12 @@ import { setOpenSidebar, setScreenSize } from "../../store/Reducers/userSlice";
 import { BsChevronDoubleRight, BsBell } from "react-icons/bs";
 import { CiSearch } from "react-icons/ci";
 import logo from "../../assets/images/thomas.jpg";
+import facebook from "../../assets/images/facebook.png";
+import instagram from "../../assets/images/instagram.png";
+import linkedin from "../../assets/images/linkedin.png";
+import twitter from "../../assets/images/twitter.png";
 
-const Header = () => {
+const Header = ({ title, options }) => {
   const dispatch = useDispatch();
   const screenSize = useSelector((state) => state.user.screensize);
   const side = useSelector((state) => state.user.openSidebar);
@@ -21,10 +25,25 @@ const Header = () => {
     };
   }, [screenSize]);
 
+  const socials = [
+    {
+      social: "Instagram",
+    },
+    {
+      social: "Linkedin",
+    },
+    {
+      social: "Twitter",
+    },
+    {
+      social: "Facebook",
+    },
+  ];
+
   return (
-    <div className="">
+    <nav className="mb-6">
       {!side && screenSize <= 768 ? (
-        <div className="icon absolute left-0 top-9 ml-3 justify-center">
+        <div className="icon absolute left-0 sm:top-12 top-8 ml-3 justify-center">
           <span onClick={() => dispatch(setOpenSidebar())}>
             <BsChevronDoubleRight />
           </span>
@@ -35,14 +54,29 @@ const Header = () => {
         style={{ marginLeft: screenSize <= 768 ? "2rem" : "" }}
       >
         <div className="flex flex-col gap-y-0.5">
-          <h1 className="text-black1  font-bold md:text-3xl sm:text-2xl text-xl">
-            Welcome, Thomas
+          <h1 className="text-black1  font-bold md:text-3xl sm:text-2xltext-xl">
+            {title}
           </h1>
           <p className="text-natural3 text-xs sm:text-sm md:text-base font-medium capitalize">
             Here is what is happening in your account today
           </p>
         </div>
-        <div className="flex gap-4">
+        <div className="flex gap-4 h-8">
+          {options ? (
+            <div className="bg-white p-3 rounded-md flex justify-center items-center">
+              <select
+                defaultValue="instagram"
+                className="outline-0 border-natural3 text-black2"
+              >
+                {socials.map((item, index) => (
+                  <option key={index} value={item.social.toLowerCase()}>
+                    {item.social}
+                  </option>
+                ))}
+              </select>
+            </div>
+          ) : null}
+
           <div className="icon">
             <CiSearch />
           </div>
@@ -66,7 +100,7 @@ const Header = () => {
           </div>
         </div>
       </div>
-    </div>
+    </nav>
   );
 };
 

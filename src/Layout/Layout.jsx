@@ -1,14 +1,12 @@
 import React from "react";
 import Sidebar from "../component/Sidebar/Sidebar";
 import Routers from "../Router/Routers";
-import Header from "../component/Header/Header";
 
 const Layout = () => {
   return (
-    <div className="w-screen h-screen flex relative bg-fill">
+    <div className="w-screen  flex relative bg-fill">
       <Sidebar />
-      <div className="section flex flex-col w-full">
-        <Header />
+      <div className="section w-full">
         <Routers />
       </div>
     </div>
