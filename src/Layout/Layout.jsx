@@ -4,7 +4,7 @@ import Routers from "../Router/Routers";
 
 const Layout = () => {
   return (
-    <div className="w-screen  flex relative bg-fill">
+    <div className="w-screen flex relative">
       <Sidebar />
       <div className="section w-full">
         <Routers />

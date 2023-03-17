@@ -42,7 +42,7 @@ const Header = ({ title, options }) => {
 
   return (
     <nav className="mb-6">
-      {!side && screenSize <= 768 ? (
+      {!side && screenSize <= 976 ? (
         <div className="icon absolute left-0 sm:top-12 top-8 ml-3 justify-center">
           <span onClick={() => dispatch(setOpenSidebar())}>
             <BsChevronDoubleRight />
@@ -51,7 +51,7 @@ const Header = ({ title, options }) => {
       ) : null}
       <div
         className="flex flex-col gap-y-5 justify-between lg:flex-row md:flex-grow"
-        style={{ marginLeft: screenSize <= 768 ? "2rem" : "" }}
+        style={{ marginLeft: screenSize <= 976 ? "2rem" : "" }}
       >
         <div className="flex flex-col gap-y-0.5">
           <h1 className="text-black1  font-bold md:text-3xl sm:text-2xltext-xl">

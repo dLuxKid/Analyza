@@ -24,21 +24,21 @@ const Sidebar = () => {
   const normalLink =
     "flex items-center gap-3 pt-2 pb-2 pl-2 pr-10 rounded-md text-natural3 text-base sm:text-xl font-normal text-center capitalize cursor-pointer";
 
-  if (!openSidebar && screensize <= 768) {
+  if (!openSidebar && screensize <= 976) {
     return null;
   }
 
   return (
     <div
       className={`w-60 overflow-auto duration-300 bg-black1 ${
-        openSidebar && screensize <= 768 ? "fixed" : null
+        openSidebar && screensize <= 976 ? "fixed" : null
       }`}
     >
       <div className="flex justify-between flex-col h-screen">
         <div className="flex flex-col items-center justify-center gap-10 mt-6 p-5">
           <div
             className={`flex justify-${
-              screensize > 768 ? "center" : "between"
+              screensize > 976 ? "center" : "between"
             } w-full`}
           >
             <h1 className="text-white text-center origin-left font-bold items-center md:text-2xl sm:text-xl">
@@ -48,7 +48,7 @@ const Sidebar = () => {
               className="text-white text-xl sm:text-2xl flex justify-center align-middle items-center text-center "
               onClick={() => dispatch(setOpenSidebar())}
             >
-              {screensize <= 768 ? <BsChevronDoubleLeft /> : null}
+              {screensize <= 976 ? <BsChevronDoubleLeft /> : null}
             </p>
           </div>
           <div className="flex flex-col justify-center gap-2">
