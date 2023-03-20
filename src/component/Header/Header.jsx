@@ -4,10 +4,10 @@ import { setOpenSidebar, setScreenSize } from "../../store/Reducers/userSlice";
 import { BsChevronDoubleRight, BsBell } from "react-icons/bs";
 import { CiSearch } from "react-icons/ci";
 import logo from "../../assets/images/thomas.jpg";
-import facebook from "../../assets/images/facebook.png";
-import instagram from "../../assets/images/instagram.png";
-import linkedin from "../../assets/images/linkedin.png";
-import twitter from "../../assets/images/twitter.png";
+// import facebook from "../../assets/images/facebook.png";
+// import instagram from "../../assets/images/instagram.png";
+// import linkedin from "../../assets/images/linkedin.png";
+// import twitter from "../../assets/images/twitter.png";
 
 const Header = ({ title, options }) => {
   const dispatch = useDispatch();
@@ -50,7 +50,7 @@ const Header = ({ title, options }) => {
         </div>
       ) : null}
       <div
-        className="flex flex-col gap-y-5 justify-between lg:flex-row md:flex-grow"
+        className="flex flex-col gap-y-3 md:gap-y-5 justify-between lg:flex-row md:flex-grow"
         style={{ marginLeft: screenSize <= 976 ? "2rem" : "" }}
       >
         <div className="flex flex-col gap-y-0.5">
@@ -61,9 +61,9 @@ const Header = ({ title, options }) => {
             Here is what is happening in your account today
           </p>
         </div>
-        <div className="flex gap-4 h-8">
+        <div className="flex gap-0 sm:gap-2 md:gap-4 h-8">
           {options ? (
-            <div className="bg-white p-3 rounded-md flex justify-center items-center">
+            <div className="flex justify-center items-center p-2 -ml-5 md:ml-0">
               <select
                 defaultValue="instagram"
                 className="outline-0 border-natural3 text-black2"
@@ -83,7 +83,7 @@ const Header = ({ title, options }) => {
           <div className="icon">
             <BsBell />
           </div>
-          <div className="flex gap-2">
+          <div className="flex  gap-1 sm:gap-2">
             <div className="h-8 w-8 rounded-full overflow-hidden">
               <img
                 src={logo}
@@ -92,10 +92,10 @@ const Header = ({ title, options }) => {
               />
             </div>
             <div className="flex flex-col h-8">
-              <p className="font-bold text-black2 text-sm leading-4">
+              <p className="font-bold text-black2  text-xs sm:text-sm leading-4">
                 Thomas F.
               </p>
-              <p className="text-xs text-natural3">UI Designer</p>
+              <p className="font-extralight text-xs sm:text-sm text-natural3">UI Designer</p>
             </div>
           </div>
         </div>

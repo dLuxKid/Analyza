@@ -30,16 +30,14 @@ const Sidebar = () => {
 
   return (
     <div
-      className={`w-60 overflow-auto duration-300 bg-black1 ${
-        openSidebar && screensize <= 976 ? "fixed" : null
-      }`}
+      className={`w-60 overflow-auto duration-300 bg-black1 ${openSidebar && screensize <= 976 ? "fixed" : null
+        }`}
     >
       <div className="flex justify-between flex-col h-screen">
         <div className="flex flex-col items-center justify-center gap-10 mt-6 p-5">
           <div
-            className={`flex justify-${
-              screensize > 976 ? "center" : "between"
-            } w-full`}
+            className={`flex justify-${screensize > 976 ? "center" : "between"
+              } w-full`}
           >
             <h1 className="text-white text-center origin-left font-bold items-center md:text-2xl sm:text-xl">
               Analyza
