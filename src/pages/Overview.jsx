@@ -51,7 +51,7 @@ const Overview = () => {
     responsive: true,
     plugins: {
       legend: {
-        position: "top",
+        position: "false",
       },
       title: {
         display: false,
@@ -122,7 +122,7 @@ const Overview = () => {
                 Range Stats
               </p>
               <div className="rounded-lg border-natural3 bg-white border p-1">
-                <select className="text-natural3 outline-0">
+                <select className="text-natural3 outline-0 cursor-pointer">
                   <option value="monthly">Monthly</option>
                   <option value="weekly">Weekly</option>
                 </select>

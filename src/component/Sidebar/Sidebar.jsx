@@ -29,7 +29,7 @@ const Sidebar = () => {
   }
 
   return (
-    <div
+    <aside
       className={`w-60 overflow-auto duration-300 bg-black1 ${openSidebar && screensize <= 976 ? "fixed" : null
         }`}
     >
@@ -68,7 +68,7 @@ const Sidebar = () => {
           <HiOutlineLogout /> <p>Logout</p>
         </div>
       </div>
-    </div>
+    </aside>
   );
 };
 

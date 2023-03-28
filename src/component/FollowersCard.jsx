@@ -2,7 +2,7 @@ import React from 'react'
 
 const FollowersCard = ({ image, followers, color, sign }) => {
     return (
-        <div className="flex gap-5 px-4 py-2 justify-center items-center bg-white rounded-xl">
+        <div className="flex grow sm:grow-0 gap-5 px-4 py-2 justify-start md:justify-center items-center bg-white rounded-xl">
             <div className="w-10 h-10 rounded-full overflow-hidden">
                 <img src={image} alt={image} className="w-full h-full" />
             </div>

@@ -61,7 +61,7 @@ const Header = ({ title, options }) => {
             Here is what is happening in your account today
           </p>
         </div>
-        <div className="flex gap-0 sm:gap-2 md:gap-4 h-8">
+        <div className="flex gap-1 sm:gap-2 md:gap-4 h-8">
           {options ? (
             <div className="flex justify-center items-center p-2 -ml-5 md:ml-0">
               <select
@@ -84,13 +84,13 @@ const Header = ({ title, options }) => {
             <BsBell />
           </div>
           <div className="flex  gap-1 sm:gap-2">
-            <div className="h-8 w-8 rounded-full overflow-hidden">
+            {/* <div className="h-8 w-8 rounded-full overflow-hidden">
               <img
                 src={logo}
                 alt="logo"
                 className="h-full w-full object-cover"
               />
-            </div>
+            </div> */}
             <div className="flex flex-col h-8">
               <p className="font-bold text-black2  text-xs sm:text-sm leading-4">
                 Thomas F.
