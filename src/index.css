@@ -1,6 +1,13 @@
-/* * {
-  outline: 1px solid red;
-} */
+* {
+  /* outline: 1px solid red; */
+  -ms-overflow-style: none;  
+  scrollbar-width: none;
+}
+
+
+*::-webkit-scrollbar {
+  display: none;
+}
 
 
 @tailwind base;
